@@ -3,42 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo de Productos</title>
+    <title>Catálogo Express - ForoBeta</title>
     <style>
-        body { font-family: sans-serif; margin: 0; padding: 20px; background: #f4f4f4; text-align: center; }
-        .container { max-width: 600px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        h1 { color: #333; }
-        .producto { border-bottom: 1px solid #eee; padding: 15px 0; display: flex; justify-content: space-between; align-items: center; text-align: left; }
-        .info { flex: 1; }
-        .nombre { font-weight: bold; font-size: 1.1em; display: block; }
-        .precio { color: #27ae60; font-size: 1.2em; font-weight: bold; }
-        .btn-ws { background: #25d366; color: white; text-decoration: none; padding: 10px 15px; border-radius: 5px; font-weight: bold; font-size: 0.9em; }
-        .btn-ws:hover { background: #128c7e; }
+        :root { --whatsapp: #25D366; --dark: #333; --gray: #f9f9f9; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: var(--gray); color: var(--dark); }
+        header { background: white; padding: 20px; text-align: center; border-bottom: 2px solid #eee; }
+        .container { max-width: 800px; margin: 20px auto; padding: 0 15px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: 0.3s; text-align: center; padding-bottom: 15px; }
+        .card:hover { transform: translateY(-5px); }
+        .card img { width: 100%; height: 200px; object-fit: cover; background: #eee; }
+        .card h3 { margin: 15px 0 5px; font-size: 1.2rem; }
+        .price { font-size: 1.4rem; font-weight: bold; color: #2c3e50; margin-bottom: 15px; display: block; }
+        .btn-ws { background-color: var(--whatsapp); color: white; text-decoration: none; padding: 12px 25px; border-radius: 50px; font-weight: bold; display: inline-block; transition: 0.3s; }
+        .btn-ws:hover { background-color: #128c7e; transform: scale(1.05); }
+        footer { text-align: center; padding: 40px; color: #888; font-size: 0.8rem; }
     </style>
 </head>
 <body>
 
+<header>
+    <h1>Mis Productos Disponibles</h1>
+    <p>Calidad garantizada - Contacto directo por WhatsApp</p>
+</header>
+
 <div class="container">
-    <h1>Mis Productos</h1>
-    <p>Selecciona lo que necesites y escríbeme al WhatsApp.</p>
-
-    <div class="producto">
-        <div class="info">
-            <span class="nombre">Producto Ejemplo 1</span>
-            <span class="precio">$10.00</span>
+    <div class="grid">
+        
+        <div class="card">
+            <img src="foto1.jpg" alt="Producto 1">
+            <h3>Nombre del Producto 1</h3>
+            <span class="price">$15.00</span>
+            <a href="https://wa.me/TUNUMERO?text=Hola, quiero mas info de Producto 1" class="btn-ws">Comprar ahora</a>
         </div>
-        <a href="https://wa.me/TU_NUMERO?text=Hola,%20quiero%20el%20Producto%201" class="btn-ws">Pedir</a>
-    </div>
 
-    <div class="producto">
-        <div class="info">
-            <span class="nombre">Producto Ejemplo 2</span>
-            <span class="precio">$25.00</span>
+        <div class="card">
+            <img src="foto2.jpg" alt="Producto 2">
+            <h3>Nombre del Producto 2</h3>
+            <span class="price">$30.00</span>
+            <a href="https://wa.me/TUNUMERO?text=Hola, quiero mas info de Producto 2" class="btn-ws">Comprar ahora</a>
         </div>
-        <a href="https://wa.me/TU_NUMERO?text=Hola,%20quiero%20el%20Producto%202" class="btn-ws">Pedir</a>
-    </div>
 
+    </div>
 </div>
+
+<footer>
+    <p>© 2026 - Tienda Express para ForoBeta</p>
+</footer>
 
 </body>
 </html>
