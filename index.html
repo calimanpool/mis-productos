@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Productos</title>
+    <style>
+        body { font-family: sans-serif; margin: 0; padding: 20px; background: #f4f4f4; text-align: center; }
+        .container { max-width: 600px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: #333; }
+        .producto { border-bottom: 1px solid #eee; padding: 15px 0; display: flex; justify-content: space-between; align-items: center; text-align: left; }
+        .info { flex: 1; }
+        .nombre { font-weight: bold; font-size: 1.1em; display: block; }
+        .precio { color: #27ae60; font-size: 1.2em; font-weight: bold; }
+        .btn-ws { background: #25d366; color: white; text-decoration: none; padding: 10px 15px; border-radius: 5px; font-weight: bold; font-size: 0.9em; }
+        .btn-ws:hover { background: #128c7e; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Mis Productos</h1>
+    <p>Selecciona lo que necesites y escríbeme al WhatsApp.</p>
+
+    <div class="producto">
+        <div class="info">
+            <span class="nombre">Producto Ejemplo 1</span>
+            <span class="precio">$10.00</span>
+        </div>
+        <a href="https://wa.me/TU_NUMERO?text=Hola,%20quiero%20el%20Producto%201" class="btn-ws">Pedir</a>
+    </div>
+
+    <div class="producto">
+        <div class="info">
+            <span class="nombre">Producto Ejemplo 2</span>
+            <span class="precio">$25.00</span>
+        </div>
+        <a href="https://wa.me/TU_NUMERO?text=Hola,%20quiero%20el%20Producto%202" class="btn-ws">Pedir</a>
+    </div>
+
+</div>
+
+</body>
+</html>
